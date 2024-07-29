@@ -222,21 +222,21 @@ return {
 		label = 'Scrap Metal',
 		weight = 80,
 	},
-	
+
 	['casino_beer'] = {
 		label = 'Beer',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_burger'] = {
 		label = 'Burger',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_chips'] = {
 		label = 'Chips',
 		weight = 0,
@@ -244,56 +244,56 @@ return {
 		consume = 0,
 		stack = true,
 	},
-	
+
 	['casino_coffee'] = {
 		label = 'Coffee',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_coke'] = {
 		label = 'Cola',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_donut'] = {
 		label = 'Chocolate Donut',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_ego_chaser'] = {
 		label = 'casino ego chaser',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_luckypotion'] = {
 		label = 'casino luckypotion',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_psqs'] = {
 		label = 'Casino Ps & Qs',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_sandwitch'] = {
 		label = 'Sandwitch',
 		weight = 0,
 		close = true,
 		consume = 0,
 	},
-	
+
 	['casino_sprite'] = {
 		label = 'Sprunk',
 		weight = 0,
