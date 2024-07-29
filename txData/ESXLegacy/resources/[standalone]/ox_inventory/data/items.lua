@@ -1,4 +1,4 @@
-return {
+do return {
 	['testburger'] = {
 		label = 'Test Burger',
 		weight = 220,
@@ -17,10 +17,10 @@ return {
 		},
 		buttons = {
 			{
-				label = 'Lick it',
-				action = function(slot)
-					print('You licked the burger')
-				end
+			label = 'Lick it',
+			action = function(slot)
+				print('You licked the burger')
+			end
 			},
 			{
 				label = 'Squeeze it',
@@ -425,7 +425,7 @@ return {
 		stack = true,
 		close = true,
 	},
-}
+
 	['casino_beer'] = {
 		label = 'Beer',
 		weight = 0,
@@ -503,4 +503,4 @@ return {
 		close = true,
 		consume = 0,
 	}
-}
+} end
