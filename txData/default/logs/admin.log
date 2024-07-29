@@ -1,0 +1,24 @@
+
+================================================================
+======== txAdmin v7.2.2 atop fxserver 9073 Starting - 7/29/2024, 1:48:35 AM
+================================================================
+[01:49:34][TheKodah] created admins file
+[01:50:09][TheKodah] Changing global settings via setup stepper and started Deployer.
+
+================================================================
+======== txAdmin v7.2.2 atop fxserver 9073 Starting - 7/29/2024, 2:01:58 AM
+================================================================
+[02:02:09][TheKodah] logged in from 152.97.214.35 via cfxre
+[02:02:20][TheKodah] Changing global settings via setup stepper and started Deployer.
+[02:02:23][TheKodah] Setting recipe.
+
+================================================================
+======== txAdmin v7.2.2 atop fxserver 9073 Starting - 7/29/2024, 2:07:10 AM
+================================================================
+[02:07:21][TheKodah] logged in from 152.97.214.35 via cfxre
+[02:07:56][TheKodah] Changing global settings via setup stepper and started Deployer.
+[02:07:58][TheKodah] Setting recipe.
+[02:09:14][TheKodah] Running recipe.
+[02:10:39][TheKodah] Completed and committed server deploy.
+[02:12:35][TheKodah] Changing fxRunner settings.
+[02:12:40][TheKodah] executed "RESTART SERVER"
