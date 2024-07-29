@@ -49829,7 +49829,7 @@ var config = (() => {
     config4.general.useResourceIntegration = true;
   }
   return config4;
-})();
+});
 
 // server/server.ts
 var import_integrations = __toESM(require_dist3());
