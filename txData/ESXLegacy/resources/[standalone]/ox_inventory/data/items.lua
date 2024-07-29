@@ -222,7 +222,7 @@ return {
 		label = 'Scrap Metal',
 		weight = 80,
 	},
-
+	
 	['casino_beer'] = {
 		label = 'Beer',
 		weight = 0,
