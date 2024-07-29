@@ -1,7 +1,7 @@
 Config = {}
 Config.Locale = GetConvar('esx:locale', 'en')
 
-Config.DrawDistance = 10.0
+Config.DrawDistance = 30.0
 
 Config.Markers = {
 	EntryPoint = {
@@ -35,15 +35,15 @@ Config.Markers = {
 Config.Garages = {
 	VespucciBoulevard = {
 		EntryPoint = {
-			x = -285.2,
-			y = -886.5,
-			z = 31.0,
+			x = -334.655,
+			y = -779.631,
+			z = 33.964,
 		},
 		SpawnPoint = {
-			x = -309.3,
-			y = -897.0,
-			z = 31.0,
-			heading = 351.8,
+			x = -334.616,
+			y = -751.029,
+			z = 33.964,
+			heading = 187.086,
 		},
 		Sprite = 357,
 		Scale = 0.8,
