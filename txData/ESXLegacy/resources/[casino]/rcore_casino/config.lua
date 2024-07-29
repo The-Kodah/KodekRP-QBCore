@@ -33,7 +33,7 @@ Config = {
     Xmas = false,
 
     -- Target
-    UseTarget = true, -- whether to use target zones or not
+    UseTarget = false, -- whether to use target zones or not
     TargetZoneType = 4, -- 1: q_target, 2: bt_target, 3: qb-target, 4: ox_target
 
     -- Chips, Inventory Settings
