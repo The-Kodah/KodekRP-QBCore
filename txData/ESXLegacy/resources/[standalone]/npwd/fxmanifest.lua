@@ -26,3 +26,5 @@ dependency({
 	"screenshot-basic",
 	"pma-voice",
 })
+
+export 'newPlayer'
