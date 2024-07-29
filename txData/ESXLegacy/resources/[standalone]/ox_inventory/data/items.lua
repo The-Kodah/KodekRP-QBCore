@@ -223,7 +223,6 @@ return {
 		weight = 80,
 	},
 
-<<<<<<< HEAD
 	["alive_chicken"] = {
 		label = "Living chicken",
 		weight = 1,
@@ -427,7 +426,6 @@ return {
 		close = true,
 	},
 }
-=======
 	['casino_beer'] = {
 		label = 'Beer',
 		weight = 0,
@@ -506,4 +504,3 @@ return {
 		consume = 0,
 	}
 }
->>>>>>> 33b22c4ceb0efe0d098439092207f96ef2619732
