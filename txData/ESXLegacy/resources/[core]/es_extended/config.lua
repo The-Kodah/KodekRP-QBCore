@@ -18,7 +18,7 @@ Config.Accounts = {
     },
 }
 
-Config.StartingAccountMoney = { bank = 50000 }
+Config.StartingAccountMoney = { bank = 10000, money = 1000 }
 
 Config.StartingInventoryItems = false -- table/false
 
@@ -41,7 +41,7 @@ Config.EnableSocietyPayouts = false -- pay from the society account that the pla
 Config.MaxWeight = 24 -- the max inventory weight without a backpack
 Config.PaycheckInterval = 7 * 60000 -- how often to receive paychecks in milliseconds
 Config.EnableDebug = false -- Use Debug options?
-Config.EnableDefaultInventory = true -- Display the default Inventory ( F2 )
+Config.EnableDefaultInventory = false -- Display the default Inventory ( F2 )
 Config.EnableWantedLevel = false -- Use Normal GTA wanted Level?
 Config.EnablePVP = true -- Allow Player to player combat
 
@@ -56,8 +56,8 @@ Config.DisableVehicleRewards = false -- Disables Player Receiving weapons from v
 Config.DisableNPCDrops = false -- stops NPCs from dropping weapons on death
 Config.DisableDispatchServices = false -- Disable Dispatch services
 Config.DisableScenarios = false -- Disable Scenarios
-Config.DisableWeaponWheel = false -- Disables default weapon wheel
-Config.DisableAimAssist = false -- disables AIM assist (mainly on controllers)
+Config.DisableWeaponWheel = true -- Disables default weapon wheel
+Config.DisableAimAssist = true -- disables AIM assist (mainly on controllers)
 Config.DisableVehicleSeatShuff = false -- Disables vehicle seat shuff
 Config.DisableDisplayAmmo = false -- Disable ammunition display
 Config.RemoveHudComponents = {
