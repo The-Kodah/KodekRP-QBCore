@@ -130,12 +130,77 @@ return {
 			['ambulance'] = 0
 		},
 		blip = {
-			id = 403, colour = 69, scale = 0.8
+			id = 403, colour = 42, scale = 0.8
+		}, inventory = {
+			-- Servicing Items
+			{ name = 'engine_oil', price = 100 },
+			{ name = 'tyre_replacement', price = 100 },
+			{ name = 'clutch_replacement', price = 100 },
+			{ name = 'air_filter', price = 100 },
+			{ name = 'spark_plug', price = 100 },
+			{ name = 'suspension_parts', price = 100 },
+			{ name = 'brakepad_replacement', price = 100 },
+			-- Engine Items
+			{ name = 'i4_engine', price = 100 },
+			{ name = 'v6_engine', price = 100 },
+			{ name = 'v8_engine', price = 100 },
+			{ name = 'v12_engine', price = 100 },
+			{ name = 'turbocharger', price = 100 },
+			-- Electric Engines
+			{ name = 'ev_motor', price = 100 },
+			{ name = 'ev_battery', price = 100 },
+			{ name = 'ev_coolant', price = 100 },
+			-- Drivetrain Items
+			{ name = 'awd_drivetrain', price = 100 },
+			{ name = 'rwd_drivetrain', price = 100 },
+			{ name = 'fwd_drivetrain', price = 100 },
+			-- Tuning Items
+			{ name = 'slick_tyres', price = 100 },
+			{ name = 'semi_slick_tyres', price = 100 },
+			{ name = 'offroad_tyres', price = 100 },
+			{ name = 'ceramic_brakes', price = 100 },
+			{ name = 'drift_tuning_kit', price = 100 },
+			-- Cosmetic Items
+			{ name = 'lighting_controller', price = 100 },
+			{ name = 'stancing_kit', price = 100 },
+			{ name = 'cosmetic_part', price = 100 },
+			{ name = 'respray_kit', price = 100 },
+			{ name = 'vehicle_wheels', price = 100 },
+			{ name = 'tyre_smoke_kit', price = 100 },
+			{ name = 'bulletproof_tyres', price = 100 },
+			{ name = 'extras_kit', price = 100 },
+			-- Nitrous
+			{ name = 'nitrous_bottle', price = 100 },
+			{ name = 'empty_nitrous_bottle', price = 100 },
+			{ name = 'nitrous_install_kit', price = 100 },
+			-- Repair & Cleaning Items
+			{ name = 'cleaning_kit', price = 100 },
+			{ name = 'repair_kit', price = 100 },
+			{ name = 'duct_tape', price = 100 },
+			-- Performance
+			{ name = 'performance_part', price = 100 },
+			-- Mechanic Tablet
+			{ name = 'mechanic_tablet', price = 100 }
+
+		}, locations = {
+			vec3(306.3687, -601.5139, 43.28406)
+		}, targets = {
+
+		}
+	},
+
+	Parts = {
+		name = 'Mechanic Parts',
+		groups = {
+			['mechanic'] = 0
+		},
+		blip = {
+			id = 478, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'medikit', price = 26 },
 			{ name = 'bandage', price = 5 }
 		}, locations = {
-			vec3(306.3687, -601.5139, 43.28406)
+			vector3(1202.124, -3249.614, 7.088624)
 		}, targets = {
 
 		}
