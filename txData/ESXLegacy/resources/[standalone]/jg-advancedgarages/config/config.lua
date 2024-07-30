@@ -277,7 +277,7 @@ Config.JobGarageLocations = { -- IMPORTANT - Every garage name must be unique
   ["Mechanic"] = {
     coords = vector3(-199.0022, -1317.218, 31.28504),
     spawn = vector4(-207.8242, -1323.39, 31.28504, 357.1654),
-    distance = 15,
+    distance = 5,
     job = {"mechanic"},
     type = "car",
     hideBlip = false,
@@ -286,7 +286,7 @@ Config.JobGarageLocations = { -- IMPORTANT - Every garage name must be unique
       color = 0,
       scale = 0.7
     },
-    hideMarkers = true,
+    hideMarkers = false,
     markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
     vehiclesType = "owned", -- Use owned vehicles that can anyone in this society can access - more details: https://docs.jgscripts.com/advanced-garages/job-and-gang-garages
   },
@@ -356,7 +356,7 @@ Config.GangGarageLocations = { -- IMPORTANT - Every garage name must be unique
 
 -- Impound
 Config.ImpoundCommand = "iv"
-Config.ImpoundFeesSocietyFund = "mechanic" -- Job name of society fund to pay impound fees into (optional)
+Config.ImpoundFeesSocietyFund = "police" -- Job name of society fund to pay impound fees into (optional)
 Config.ImpoundShowBlips = true
 Config.ImpoundUniqueBlips = true
 Config.ImpoundTimeOptions = {0, 1, 4, 12, 24, 72, 168} -- in hours
@@ -364,7 +364,7 @@ Config.ImpoundLocations = { -- IMPORTANT - Every impound name must be unique
   ["Impound A"] = {
     coords = vector3(-191.934, -1163.104, 23.66882),
     spawn = vector4(-208.7208, -1169.038, 23.02856, 85.03936),
-    distance = 15,
+    distance = 5,
     type = "car",
     job = {"police"},
     hideBlip = false,
@@ -373,7 +373,7 @@ Config.ImpoundLocations = { -- IMPORTANT - Every impound name must be unique
       color = 0,
       scale = 0.7
     },
-    hideMarkers = true,
+    hideMarkers = false,
     markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
   }
 }
