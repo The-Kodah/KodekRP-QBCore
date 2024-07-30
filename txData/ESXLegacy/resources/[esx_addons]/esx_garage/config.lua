@@ -72,15 +72,15 @@ Config.Garages = {
 Config.Impounds = {
 	LosSantos = {
 		GetOutPoint = {
-			x = 400.7,
-			y = -1630.5,
-			z = 29.3,
+			x = -190.787,
+			y = -1162.286,
+			z = 23.668,
 		},
 		SpawnPoint = {
-			x = 401.9,
-			y = -1647.4,
-			z = 29.2,
-			heading = 323.3,
+			x = -208.827,
+			y = -1167.97,
+			z = 23.028,
+			heading = 175.748,
 		},
 		Sprite = 524,
 		Scale = 0.8,
