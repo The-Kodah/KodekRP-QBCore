@@ -3,7 +3,7 @@ Config = {
     Locale = "en", -- en
 
     -- Map
-    MapType = 7,
+    MapType = 2,
     -- 1: UncleJust Casino / DlcIplLoader
     -- 2: Gabz Casino
     -- 3: NoPixel Casino
@@ -50,7 +50,7 @@ Config = {
     ]]
     MoneyInventoryItemName = nil, -- name of the money inventory item, set to nil, if you don't want to use inventory item as the money
     UseOnlyMoney = false, -- set to true if you want to play with money only, without casino chips
-    ExchangeRate = 100, -- set value of one casino chip, for example, set to 5, if 1 chip equals to 5$ (minimum: 0.1, rounded by 0.1, 0.5 or 1)
+    ExchangeRate = 1, -- set value of one casino chip, for example, set to 5, if 1 chip equals to 5$ (minimum: 0.1, rounded by 0.1, 0.5 or 1)
     ChipsInventoryItem = "casino_chips",
     UseBankMoney = false, -- cash or bank?
     DailyWidthdrawLimit = 0, -- how much money can player withdraw from the cashier per day (24 hours), set to 0 to disable
@@ -207,7 +207,7 @@ Config = {
     -- Ui
     UIFontName = nil, -- font for the UI, set to nil, if you don't want to use a custom font, set to a font name (with ""), if you wanna register and use a font that's inside your /stream/fonts folder
     ShowHowToPlayUI = 1, -- How to play/Info about the game UI (Menu that shows after pressing 'E' to play. (0: disabled, 1: only once, 2: every time after pressing 'E')
-    ShowChipsHud = true, -- whether to use the built-in chips hud on the top-right corner
+    ShowChipsHud = false, -- whether to use the built-in chips hud on the top-right corner
     UseNUIHUD = false, -- whether to use chips hud on NUI (you can customize it in 'html/index.html')
 
     -- Database
