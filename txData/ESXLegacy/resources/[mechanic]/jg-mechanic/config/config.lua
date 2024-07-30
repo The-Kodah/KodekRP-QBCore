@@ -123,7 +123,7 @@ Config.MechanicAdminCommand = "mechanicadmin"
       {
         coords = vector3(-207.4814, -1327.214, 31.28504),
         size = 5.0,
-        showBlip = false,
+        showBlip = true,
         employeeOnly = true,
       }
     },
