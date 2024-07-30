@@ -108,7 +108,7 @@ Config.VolumeAdjust = 0.05
 Config.distanceFromRadio = 3.0
 
 -- only who spawned can interact
-Config.onlyAutor = true
+Config.onlyAutor = false
 
 -- an item name.
 Config.itemName = "boombox"
