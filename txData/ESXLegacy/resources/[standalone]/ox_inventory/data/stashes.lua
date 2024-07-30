@@ -52,7 +52,7 @@ return {
 		label = "Benny's Motorworks Storage",
 		owner = true,
 		slots = 70,
-		weight = 70000,
+		weight = 700000,
 		groups = {['mechanic'] = 0}
 	}
 }
