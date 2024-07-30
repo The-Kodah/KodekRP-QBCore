@@ -6,10 +6,10 @@ Config.Controls = {
 	toggleNPCJob = "F7"
 }
 
-Config.DrawDistance               = 10.0 -- How close you need to be in order for the markers to be drawn (in GTA units).
+Config.DrawDistance               = 30.0 -- How close you need to be in order for the markers to be drawn (in GTA units).
 Config.MaxInService               = -1
 Config.EnablePlayerManagement     = true -- Enable society managing.
-Config.EnableSocietyOwnedVehicles = false
+Config.EnableSocietyOwnedVehicles = true
 
 Config.NPCSpawnDistance           = 500.0
 Config.NPCNextToDistance          = 25.0
@@ -30,41 +30,41 @@ Config.Vehicles = {
 Config.Zones = {
 
 	MechanicActions = {
-		Pos   = vector3(-342.291, -133.370, 39.009 ),
+		Pos   = vector3(-221.723, -1334.914, 31.28504),
 		Size  = { x = 1.0, y = 1.0, z = 1.0 },
 		Color = { r = 50, g = 200, b = 50 },
 		Type  = 21
 	},
 
 	Garage = {
-		Pos   = vector3(-97.5, 6496.1, 31.4 ),
+		Pos   = vector3(-218.6374, -1331.17, 31.28504),
 		Size  = { x = 1.0, y = 1.0, z = 1.0 },
 		Color = { r = 50, g = 200, b = 50 },
 		Type  = 21
 	},
 
 	Craft = {
-		Pos   = vector3( -323.140, -129.882, 38.999 ),
+		Pos   = vector3(-206.5318, -1336.88, 31.28504),
 		Size  = { x = 1.0, y = 1.0, z = 1.0 },
 		Color = { r = 50, g = 200, b = 50 },
 		Type  = 21
 	},
 
 	VehicleSpawnPoint = {
-		Pos   = vector3(-366.354, -110.766, 37.696 ),
+		Pos   = vector4(-221.7758, -1327.318, 31.28504, 85.03936),
 		Size  = { x = 1.5, y = 1.5, z = 1.0 },
 		Type  = -1
 	},
 
 	VehicleDeleter = {
-		Pos   = vector3(-386.899, -105.675, 37.683 ),
+		Pos   = vector3(-222.1186, -1335.52, 31.28504),
 		Size  = { x = 3.0, y = 3.0, z = 1.0 },
 		Color = { r = 204, g = 204, b = 0 },
 		Type  = 1
 	},
 
 	VehicleDelivery = {
-		Pos   = vector3(-382.925, -133.748, 37.685 ),
+		Pos   = vector3(-241.055, -1325.684, 31.28504),
 		Size  = { x = 20.0, y = 20.0, z = 3.0 },
 		Color = { r = 204, g = 204, b = 0 },
 		Type  = -1
