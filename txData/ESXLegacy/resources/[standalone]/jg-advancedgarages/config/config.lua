@@ -82,7 +82,7 @@ Config.GarageLocations = { -- IMPORTANT - Every garage name must be unique
       color = 0,
       scale = 0.7
     },
-    hideMarkers = true,
+    hideMarkers = false,
     markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
   },
   ["Islington South"] = {
@@ -275,7 +275,7 @@ Config.JobGarageUniqueLocations = true
 Config.JobGarageEnableInteriors = true
 Config.JobGarageLocations = { -- IMPORTANT - Every garage name must be unique
   ["Mechanic"] = {
-    coords = vector3(-199.0022, -1317.218, 31.28504),
+    coords = vector3(-219.956, -1327.292, 31.28504),
     spawn = vector4(-207.8242, -1323.39, 31.28504, 357.1654),
     distance = 5,
     job = {"mechanic"},
@@ -287,7 +287,7 @@ Config.JobGarageLocations = { -- IMPORTANT - Every garage name must be unique
       scale = 0.7
     },
     hideMarkers = false,
-    markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
+    markers = { id = 39, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 1, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
     vehiclesType = "owned", -- Use owned vehicles that can anyone in this society can access - more details: https://docs.jgscripts.com/advanced-garages/job-and-gang-garages
   },
   ["Police"] = {
