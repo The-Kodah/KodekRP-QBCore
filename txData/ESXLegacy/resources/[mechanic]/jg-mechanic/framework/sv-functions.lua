@@ -75,7 +75,7 @@ function Framework.Server.HasItem(src, itemName, qty)
     Framework.Server.Notify(src, Locale.itemNotInInventory:format(qty, Locale[itemName] or itemName), "error")
     return false
   end
-  
+
   return true
 end
 
@@ -283,7 +283,7 @@ function Framework.Server.PlayerAddMoneyOffline(identifier, amount)
       identifier
     })
     if not money then return false end
-    
+
     local moneyData = json.decode(money)
     moneyData.bank = (moneyData.bank or 0) + amount
 
@@ -295,7 +295,7 @@ function Framework.Server.PlayerAddMoneyOffline(identifier, amount)
       identifier
     })
     if not accounts then return false end
-    
+
     local accountsData = json.decode(accounts)
     accountsData.bank = (accountsData.bank or 0) + amount
 
@@ -317,8 +317,11 @@ function Framework.Server.PlayerSetJob(src, job, role)
 
   -- Adjust this as necessary for your job setup
   local rank = role
-  if role == "mechanic" then rank = 1 end
-  if role == "manager" then rank = 2 end
+  if role == "Service Writer" then rank = 1 end
+  if role == "Mechanic Apprentice" then rank = 2 end
+  if role == "Mechanic" then rank = 3 end
+  if role == "Manager" then rank = 4 end
+  if role == "Owner" then rank = 5 end
 
   if Config.Framework == "QBCore" or Config.Framework == "Qbox" then
     player.Functions.SetJob(job, rank)
@@ -333,14 +336,17 @@ end
 function Framework.Server.PlayerSetJobOffline(identifier, job, role)
   -- Adjust this as necessary for your job setup
   local rank = role
-  if role == "mechanic" then rank = 1 end
-  if role == "manager" then rank = 2 end
-  
+  if role == "Service Writer" then rank = 1 end
+  if role == "Mechanic Apprentice" then rank = 2 end
+  if role == "Mechanic" then rank = 3 end
+  if role == "Manager" then rank = 4 end
+  if role == "Owner" then rank = 5 end
+
   if Config.Framework == "QBCore" or Config.Framework == "Qbox" then
     local jobsList = {}
     if Config.Framework == "QBCore" then jobsList = QBCore.Shared.Jobs
     elseif Config.Framework == "Qbox" then jobsList = exports.qbx_core:GetJobs() end
-    
+
     if not jobsList[job] then return false end
 
     local jobData = {
@@ -349,12 +355,65 @@ function Framework.Server.PlayerSetJobOffline(identifier, job, role)
       onduty = jobsList[job].defaultDuty,
       type = jobsList[job].type or 'none',
       grade = {
-        name = 'No Grades',
-        level = 0,
+        name = 'Service Writer',
+        level = 1,
       },
-      payment = 30,
+      payment = 20,
       isboss = false
     }
+
+    local jobData = {
+      name = job,
+      label = jobsList[job].label,
+      onduty = jobsList[job].defaultDuty,
+      type = jobsList[job].type or 'none',
+      grade = {
+        name = 'Mechanic Apprentice',
+        level = 2,
+      },
+      payment = 40,
+      isboss = false
+    }
+
+    local jobData = {
+      name = job,
+      label = jobsList[job].label,
+      onduty = jobsList[job].defaultDuty,
+      type = jobsList[job].type or 'none',
+      grade = {
+        name = 'Mechanic',
+        level = 3,
+      },
+      payment = 80,
+      isboss = false
+    }
+
+    local jobData = {
+      name = job,
+      label = jobsList[job].label,
+      onduty = jobsList[job].defaultDuty,
+      type = jobsList[job].type or 'none',
+      grade = {
+        name = 'Manager',
+        level = 4,
+      },
+      payment = 200,
+      isboss = false
+    }
+
+    local jobData = {
+      name = job,
+      label = jobsList[job].label,
+      onduty = jobsList[job].defaultDuty,
+      type = jobsList[job].type or 'none',
+      grade = {
+        name = 'Owner',
+        level = 5,
+      },
+      payment = 500,
+      isboss = true
+    }
+
     if jobsList[job].grades[tostring(rank)] then
       local jobgrade = jobsList[job].grades[tostring(rank)]
       jobData.grade = {}
@@ -397,7 +456,7 @@ end)
 ---@param vehicleHash number
 lib.callback.register("jg-mechanic:server:dealerships-vehicle-value", function(src, vehicleHash)
   if not vehicleHash or GetResourceState("jg-dealerships") ~= "started" then return false end
-  
+
   local price = MySQL.scalar.await("SELECT price FROM dealership_vehicles WHERE hashkey = ?", {vehicleHash})
 
   if not price or price == nil then return false end
