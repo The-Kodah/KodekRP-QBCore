@@ -502,5 +502,16 @@ do return {
 		weight = 0,
 		close = true,
 		consume = 0,
+	},
+
+	['boombox'] = {
+		label = 'boombox',
+		weight = 250,
+		close = true,
+		consume = 1,
+		client = {},
+		server = {
+			export = 'xradio.boombox',
+		}
 	}
 } end
