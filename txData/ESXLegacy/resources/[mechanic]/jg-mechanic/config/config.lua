@@ -156,8 +156,8 @@ Config.MechanicAdminCommand = "mechanicadmin"
     carLifts = { -- only usable by employees
       vector4(-207.8638, -1319.222, 31.28504, 175.748)
     }
-  },
-}
+  }
+
 
 -- Add electric vehicles to disable combustion engine features
 Config.ElectricVehicles = {
