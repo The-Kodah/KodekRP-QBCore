@@ -51,7 +51,7 @@ Config.StanceMinTrackWidth = 0.5
 Config.StanceMaxTrackWidth = 1.25
 
 -- Repairs
-Config.AllowFixingAtOwnedMechanicsIfNoOneOnDuty = false
+Config.AllowFixingAtOwnedMechanicsIfNoOneOnDuty = true
 Config.DuctTapeMinimumEngineHealth = 100.0
 Config.DuctTapeEngineHealthIncrease = 150.0
 
@@ -74,43 +74,43 @@ Config.UpdatePropsOnChange = true
 -- Misc
 Config.UniqueBlips = true
 Config.ModsPricesAsPercentageOfVehicleValue = true -- Enable pricing tuning items as % of vehicle value - it tries jg-dealerships, then QBShared, then the vehicles meta file automagically for pricing data
-Config.AdminsHaveEmployeePermissions = false -- admins can use tablet & interact with mechanics like an owner
+Config.AdminsHaveEmployeePermissions = true -- admins can use tablet & interact with mechanics like an owner
 Config.MechanicEmployeesCanSelfServiceMods = false -- set to true to allow mechanic employees to bypass the "place order" system at their own mechanic
 Config.FullRepairAdminCommand = "vfix"
 Config.MechanicAdminCommand = "mechanicadmin"
 
 -- Mechanic Locations
-Config.MechanicLocations = {
+--Config.MechanicLocations = {
+  --bennys = {
+    --type = "self-service",
+    --logo = "bennys.png", -- logos go in /logos
+    --locations = {
+      --{
+        --coords = vector3(-227.2352, -1327.002, 31.28504),
+        --size = 10.0,
+        --showBlip = true,
+      --}
+    --},
+    --blip = {
+      --id = 446,
+      --color = 47,
+      --scale = 0.7
+    --},
+    --mods = {
+      --repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --performance      = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      --cosmetics        = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      --stance           = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --wheels           = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      --neonLights       = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --headlights       = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --tyreSmoke        = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --bulletproofTyres = { enabled = true, price = 500, percentVehVal = 0.01 },
+      --extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
+    --},
+  --},
   bennys = {
-    type = "self-service",
-    logo = "bennys.png", -- logos go in /logos
-    locations = {
-      {
-        coords = vector3(-227.2352, -1327.002, 31.28504),
-        size = 10.0,
-        showBlip = true,
-      }
-    },
-    blip = {
-      id = 446,
-      color = 47,
-      scale = 0.7
-    },
-    mods = {
-      repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
-      performance      = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
-      cosmetics        = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
-      stance           = { enabled = true, price = 500, percentVehVal = 0.01 },
-      respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
-      wheels           = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
-      neonLights       = { enabled = true, price = 500, percentVehVal = 0.01 },
-      headlights       = { enabled = true, price = 500, percentVehVal = 0.01 },
-      tyreSmoke        = { enabled = true, price = 500, percentVehVal = 0.01 },
-      bulletproofTyres = { enabled = true, price = 500, percentVehVal = 0.01 },
-      extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
-    },
-  },
-  lscustoms = {
     type = "owned",
     job = "mechanic",
     logo = "bennys.png",
@@ -142,7 +142,7 @@ Config.MechanicLocations = {
       neonLights       = { enabled = true, price = 500, percentVehVal = 0.01 },
       headlights       = { enabled = true, price = 500, percentVehVal = 0.01 },
       tyreSmoke        = { enabled = true, price = 500, percentVehVal = 0.01 },
-      bulletproofTyres = { enabled = true, price = 500, percentVehVal = 0.01 },
+      bulletproofTyres = { enabled = false, price = 500, percentVehVal = 0.01 },
       extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
     },
     tuning = {
