@@ -80,7 +80,7 @@ Config.FullRepairAdminCommand = "vfix"
 Config.MechanicAdminCommand = "mechanicadmin"
 
 -- Mechanic Locations
---Config.MechanicLocations = {
+Config.MechanicLocations = {
 --  bennys = {
 --    type = "self-service",
 --    logo = "bennys.png", -- logos go in /logos
@@ -157,7 +157,7 @@ Config.MechanicAdminCommand = "mechanicadmin"
       vector4(-207.8638, -1319.222, 31.28504, 175.748)
     }
   }
-
+}
 
 -- Add electric vehicles to disable combustion engine features
 Config.ElectricVehicles = {
