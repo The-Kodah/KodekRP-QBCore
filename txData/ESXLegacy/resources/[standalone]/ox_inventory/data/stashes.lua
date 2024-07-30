@@ -36,4 +36,23 @@ return {
 		weight = 70000,
 		groups = {['ambulance'] = 0}
 	},
+
+	{
+		coords = vec3(-201.2044, -1314.95, 31.28504),
+		target = {
+			loc = vec3(-201.2044, -1314.95, 31.28504),
+			length = 0.6,
+			width = 1.8,
+			heading = 340,
+			minZ = 43.34,
+			maxZ = 44.74,
+			label = "Benny's Motorworks Storage"
+		},
+		name = 'bennysstorage',
+		label = "Benny's Motorworks Storage",
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = {['mechanic'] = 0}
+	}
 }

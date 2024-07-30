@@ -154,7 +154,7 @@ Config.MechanicLocations = {
       driftTuning      = { enabled = true, requiresItem = true },
     },
     carLifts = { -- only usable by employees
-      vector4(-215.5516, -1318.72, 31.4, 175.1)
+      vector4(-215.5516, -1318.72, 31.4, 0.0)
     }
   }
 }
