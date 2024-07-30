@@ -1,5 +1,5 @@
 Config = {}
-Config.Debug = false
+Config.Debug = true
 
 -- Integrations
 Config.Framework = "ESX" -- or "QBCore", "Qbox", "ESX"
