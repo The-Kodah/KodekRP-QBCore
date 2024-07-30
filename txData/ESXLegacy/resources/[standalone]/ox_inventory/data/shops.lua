@@ -132,6 +132,35 @@ return {
 		blip = {
 			id = 403, colour = 42, scale = 0.8
 		}, inventory = {
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+			{ name = 'medikit', price = 10 },
+			{ name = 'bandage', price = 10 },
+		}, locations = {
+			vec3(306.3687, -601.5139, 43.28406)
+		}, targets = {
+
+		}
+	},
+
+	Parts = {
+		name = 'Mechanic Parts',
+		groups = {
+			['mechanic'] = 0
+		},
+		blip = {
+			id = 478, colour = 69, scale = 0.8
+		}, inventory = {
 			-- Servicing Items
 			{ name = 'engine_oil', price = 100 },
 			{ name = 'tyre_replacement', price = 100 },
@@ -181,24 +210,6 @@ return {
 			{ name = 'performance_part', price = 100 },
 			-- Mechanic Tablet
 			{ name = 'mechanic_tablet', price = 100 }
-
-		}, locations = {
-			vec3(306.3687, -601.5139, 43.28406)
-		}, targets = {
-
-		}
-	},
-
-	Parts = {
-		name = 'Mechanic Parts',
-		groups = {
-			['mechanic'] = 0
-		},
-		blip = {
-			id = 478, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
 		}, locations = {
 			vector3(1202.124, -3249.614, 7.088624)
 		}, targets = {
