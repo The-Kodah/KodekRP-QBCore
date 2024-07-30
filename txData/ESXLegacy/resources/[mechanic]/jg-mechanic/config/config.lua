@@ -2,12 +2,12 @@ Config = {}
 Config.Debug = false
 
 -- Integrations
-Config.Framework = "auto" -- or "QBCore", "Qbox", "ESX"
-Config.Inventory = "auto" -- or "ox_inventory", "qb-inventory", "esx_inventory"
-Config.Notifications = "auto" -- or "default", "ox_lib", "ps-ui", "okokNotify"
+Config.Framework = "ESX" -- or "QBCore", "Qbox", "ESX"
+Config.Inventory = "ox_inventory" -- or "ox_inventory", "qb-inventory", "esx_inventory"
+Config.Notifications = "ox_lib" -- or "default", "ox_lib", "ps-ui", "okokNotify"
 Config.ProgressBar = "ox-circle" -- or "ox-bar", "qb"
 Config.SkillCheck = "ox" -- or "qb"
-Config.DrawText = "auto" -- or "jg-textui", "ox_lib", "okokTextUI", "ps-ui", "qb" 
+Config.DrawText = "ox_lib" -- or "jg-textui", "ox_lib", "okokTextUI", "ps-ui", "qb" 
 
 -- Localisation
 Config.Locale = "en"
@@ -86,7 +86,7 @@ Config.MechanicLocations = {
     logo = "bennys.png", -- logos go in /logos
     locations = {
       {
-        coords = vector3(-211.6, -1324.73, 30.23),
+        coords = vector3(-227.2352, -1327.002, 31.28504),
         size = 10.0,
         showBlip = true,
       }
@@ -113,15 +113,15 @@ Config.MechanicLocations = {
   lscustoms = {
     type = "owned",
     job = "mechanic",
-    logo = "ls_customs.png",
+    logo = "bennys.png",
     locations = {
       {
-        coords = vector3(-337.25, -137.2, 38.35),
+        coords = vector3(-207.4814, -1327.214, 31.28504),
         size = 10.0,
         showBlip = true,
       },
       {
-        coords = vector3(-324.2, -132.0, 38.54),
+        coords = vector3(-207.4814, -1327.214, 31.28504),
         size = 5.0,
         showBlip = false,
         employeeOnly = true,
@@ -154,7 +154,7 @@ Config.MechanicLocations = {
       driftTuning      = { enabled = true, requiresItem = true },
     },
     carLifts = { -- only usable by employees
-      vector4(-357.45, -114.17, 38.7, 339.89)
+      vector4(-207.8638, -1319.222, 31.28504, 175.748)
     }
   },
 }
