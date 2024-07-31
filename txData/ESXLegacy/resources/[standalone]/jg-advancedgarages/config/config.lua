@@ -356,7 +356,7 @@ Config.GangGarageLocations = { -- IMPORTANT - Every garage name must be unique
 
 -- Impound
 Config.ImpoundCommand = "impound"
-Config.ImpoundFeesSocietyFund = "society_mechanic" -- Job name of society fund to pay impound fees into (optional)
+Config.ImpoundFeesSocietyFund = "police" -- Job name of society fund to pay impound fees into (optional)
 Config.ImpoundShowBlips = true
 Config.ImpoundUniqueBlips = true
 Config.ImpoundTimeOptions = {0, 1, 4, 12, 24, 72, 168} -- in hours
@@ -366,7 +366,7 @@ Config.ImpoundLocations = { -- IMPORTANT - Every impound name must be unique
     spawn = vector4(-208.7208, -1169.038, 23.02856, 85.03936),
     distance = 5,
     type = "car",
-    job = {"mechanic"},
+    job = {"police"},
     hideBlip = false,
     blip = {
       id = 68,
@@ -397,7 +397,7 @@ Config.GarageInteriorVehiclePositions = {
 -- Staff Commands
 Config.ChangeVehiclePlate = "vplate" -- admin only
 Config.DeleteVehicleFromDB = "dvdb" -- admin only
-Config.ReturnVehicleToGarage = "vr" -- admin only
+Config.ReturnVehicleToGarage = "vreturn" -- admin only
 
 -- Add your import vehicle's spawn name and desired label here for pretty vehicle names in the garage
 -- This is mainly designed for ESX - if you are using QB, do this in shared!
