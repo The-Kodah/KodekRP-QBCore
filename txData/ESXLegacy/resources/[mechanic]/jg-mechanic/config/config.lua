@@ -81,35 +81,35 @@ Config.MechanicAdminCommand = "mechanicadmin"
 
 -- Mechanic Locations
 Config.MechanicLocations = {
---  bennys = {
---    type = "self-service",
---    logo = "bennys.png", -- logos go in /logos
---    locations = {
---      {
---        coords = vector3(-227.2352, -1327.002, 31.28504),
---        size = 10.0,
---        showBlip = true,
---      }
---    },
---    blip = {
---      id = 446,
---      color = 47,
---      scale = 0.7
---    },
---    mods = {
---      repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
---      performance      = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
---      cosmetics        = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
---      stance           = { enabled = true, price = 500, percentVehVal = 0.01 },
---      respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
---      wheels           = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
---      neonLights       = { enabled = true, price = 500, percentVehVal = 0.01 },
---      headlights       = { enabled = true, price = 500, percentVehVal = 0.01 },
---      tyreSmoke        = { enabled = true, price = 500, percentVehVal = 0.01 },
---      bulletproofTyres = { enabled = true, price = 500, percentVehVal = 0.01 },
---      extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
---    },
-  --},
+  hayes = {
+    type = "self-service",
+    logo = "hayes.png", -- logos go in /logos
+    locations = {
+      {
+        coords = vector3(-1423.794, -449.8154, 35.90186),
+        size = 10.0,
+        showBlip = true,
+      }
+    },
+    blip = {
+      id = 446,
+      color = 47,
+      scale = 0.6
+    },
+    mods = {
+      repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
+      performance      = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      cosmetics        = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      stance           = { enabled = false, price = 500, percentVehVal = 0.01 },
+      respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
+      wheels           = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      neonLights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      headlights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      tyreSmoke        = { enabled = false, price = 500, percentVehVal = 0.01 },
+      bulletproofTyres = { enabled = false, price = 500, percentVehVal = 0.01 },
+      extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
+    },
+  },
   bennys = {
     type = "owned",
     job = "mechanic",
@@ -130,7 +130,7 @@ Config.MechanicLocations = {
     blip = {
       id = 446,
       color = 47,
-      scale = 0.7
+      scale = 0.6
     },
     mods = {
       repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
