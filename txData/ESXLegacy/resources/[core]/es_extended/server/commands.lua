@@ -57,7 +57,7 @@ ESX.RegisterCommand(
 )
 
 local upgrades = Config.SpawnVehMaxUpgrades and {
-    plate = "ADMINCAR",
+    plate = "ADMIN",
     modEngine = 3,
     modBrakes = 2,
     modTransmission = 2,
