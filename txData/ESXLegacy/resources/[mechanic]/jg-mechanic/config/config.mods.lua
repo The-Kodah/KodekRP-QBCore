@@ -9,7 +9,7 @@ Config.Mods = {}
 
 Config.Mods.ItemsRequired = {
   repair = { itemName = "repair_kit", removeItem = true },
-  performance = { itemName = "performance_part", removeItem = true },
+  --performance = { itemName = "performance_part", removeItem = true },
   cosmetics = { itemName = "cosmetic_part", removeItem = true },
   stance = { itemName = "stancing_kit", removeItem = false },
   respray = { itemName = "respray_kit", removeItem = true },
