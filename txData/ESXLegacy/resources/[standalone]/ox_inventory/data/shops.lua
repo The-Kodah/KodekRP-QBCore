@@ -2,7 +2,7 @@ return {
 	General = {
 		name = 'Shop',
 		blip = {
-			id = 59, colour = 69, scale = 0.8
+			id = 59, colour = 69, scale = 0.6
 		}, inventory = {
 			{ name = 'burger', price = 10 },
 			{ name = 'water', price = 10 },
@@ -35,7 +35,7 @@ return {
 	Liquor = {
 		name = 'Liquor Store',
 		blip = {
-			id = 93, colour = 69, scale = 0.8
+			id = 93, colour = 69, scale = 0.6
 		}, inventory = {
 			{ name = 'water', price = 10 },
 			{ name = 'cola', price = 10 },
@@ -61,7 +61,7 @@ return {
 	YouTool = {
 		name = 'YouTool',
 		blip = {
-			id = 566, colour = 69, scale = 0.8
+			id = 566, colour = 69, scale = 0.6
 		}, inventory = {
 			{ name = 'duct_tape', price = 10 },
 			{ name = 'repair_kit', price = 10 },
@@ -90,7 +90,7 @@ return {
 	Ammunation = {
 		name = 'Ammunation',
 		blip = {
-			id = 110, colour = 69, scale = 0.8
+			id = 110, colour = 69, scale = 0.6
 		}, inventory = {
 			{ name = 'ammo-9', price = 5, },
 			{ name = 'WEAPON_KNIFE', price = 200 },
@@ -123,7 +123,7 @@ return {
 		name = 'Police Armoury',
 		groups = shared.police,
 		blip = {
-			id = 110, colour = 84, scale = 0.8
+			id = 110, colour = 84, scale = 0.6
 		}, inventory = {
 			{ name = 'ammo-9', price = 5, },
 			{ name = 'ammo-rifle', price = 5, },
@@ -145,7 +145,7 @@ return {
 			['ambulance'] = 0
 		},
 		blip = {
-			id = 403, colour = 42, scale = 0.8
+			id = 403, colour = 42, scale = 0.6
 		}, inventory = {
 			{ name = 'medikit', price = 10 },
 			{ name = 'bandage', price = 10 },
@@ -174,7 +174,7 @@ return {
 			['mechanic'] = 0
 		},
 		blip = {
-			id = 478, colour = 69, scale = 0.8
+			id = 478, colour = 69, scale = 0.6
 		}, inventory = {
 			-- Servicing Items
 			{ name = 'engine_oil', price = 100 },
