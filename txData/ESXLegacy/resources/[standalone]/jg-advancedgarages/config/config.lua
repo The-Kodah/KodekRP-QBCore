@@ -69,10 +69,10 @@ Config.GarageVehicleReturnCostSocietyFund = true -- Job name of society fund to 
 Config.GarageShowBlips = true
 Config.GarageUniqueBlips = true
 Config.GarageUniqueLocations = true
-Config.GarageEnableInteriors = true
+Config.GarageEnableInteriors = false
 Config.GarageLocations = { -- IMPORTANT - Every garage name must be unique
   ["Legion Square"] = { -- If you change the name of this garage from Legion Square, you must change the default value of `garage_id` to the same name in the SQL table `players_vehicles`
-    coords = vector3(215.09, -805.17, 30.81),
+    coords = vector3(213.4022, -794.7692, 30.84692),
     spawn = {vector4(216.84, -802.02, 30.78, 69.82), vector4(218.09, -799.42, 30.76, 66.17), vector4(219.29, -797.23, 30.75, 65.4), vector4(219.59, -794.44, 30.75, 69.35), vector4(220.63, -792.03, 30.75, 63.76), vector4(206.81, -798.35, 30.99, 248.53)}, --  you can add multiple spawn locations into a table
     distance = 15,
     type = "car",
@@ -258,7 +258,7 @@ Config.GarageLocations = { -- IMPORTANT - Every garage name must be unique
 -- Private Garages
 Config.PrivGarageCreateCommand = "privategarages"
 Config.PrivGarageCreateJobRestriction = {"realestate"}
-Config.PrivGarageEnableInteriors = true
+Config.PrivGarageEnableInteriors = false
 Config.PrivGarageHideBlips = false
 Config.PrivGarageBlip = {
   id = 357,
@@ -334,7 +334,7 @@ Config.GangGarageSetVehicleCommand = "setgangvehicle" -- admin only
 Config.GangGarageRemoveVehicleCommand = "removegangvehicle" -- admin only
 Config.GangGarageUniqueBlips = true
 Config.GangGarageUniqueLocations = true
-Config.GangGarageEnableInteriors = true
+Config.GangGarageEnableInteriors = false
 Config.GangGarageLocations = { -- IMPORTANT - Every garage name must be unique
   ["The Lost MC"] = {
     coords = vector3(439.18, -1518.48, 29.28),
@@ -356,7 +356,7 @@ Config.GangGarageLocations = { -- IMPORTANT - Every garage name must be unique
 
 -- Impound
 Config.ImpoundCommand = "impound"
-Config.ImpoundFeesSocietyFund = "police" -- Job name of society fund to pay impound fees into (optional)
+Config.ImpoundFeesSocietyFund = "mechanic" -- Job name of society fund to pay impound fees into (optional)
 Config.ImpoundShowBlips = true
 Config.ImpoundUniqueBlips = true
 Config.ImpoundTimeOptions = {0, 1, 4, 12, 24, 72, 168} -- in hours
@@ -366,7 +366,7 @@ Config.ImpoundLocations = { -- IMPORTANT - Every impound name must be unique
     spawn = vector4(-208.7208, -1169.038, 23.02856, 85.03936),
     distance = 5,
     type = "car",
-    job = {"police"},
+    job = {"mechanic"},
     hideBlip = false,
     blip = {
       id = 68,
@@ -397,7 +397,7 @@ Config.GarageInteriorVehiclePositions = {
 -- Staff Commands
 Config.ChangeVehiclePlate = "vplate" -- admin only
 Config.DeleteVehicleFromDB = "dvdb" -- admin only
-Config.ReturnVehicleToGarage = "vreturn" -- admin only
+Config.ReturnVehicleToGarage = "vr" -- admin only
 
 -- Add your import vehicle's spawn name and desired label here for pretty vehicle names in the garage
 -- This is mainly designed for ESX - if you are using QB, do this in shared!
