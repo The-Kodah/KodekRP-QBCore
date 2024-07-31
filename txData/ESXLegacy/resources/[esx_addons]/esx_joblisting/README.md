@@ -1,15 +1,23 @@
-<h1 align='center'>[ESX] Job Listing</a></h1><p align='center'><b><a href='https://discord.esx-framework.org/'>Discord</a> - <a href='https://documentation.esx-framework.org/legacy/installation'>Documentation</a></b></h5>
+# About esx_joblisting
+Edited/Made by Human Tree92 ([Velociti Entertainment Customs & Wiki]( http://www.velocitientertainment.com/customs/ ))
 
-This Simple resource lets you finally contribute to Society and make a difference in the Word! How? it adds an amazing Menu where you can pick what you want to be in life - want to be a police officier? No-problem! Or maybe you want to stalk people and be a creepy reporter? We got you covered!
+# Helpfull Info:
+* You can specify what jobs you want to be whitelisted in the Database.
+* You can allow players to become their Whitelisted Jobs through the Job Marker.
 
-## Legal
+# Requirements:
+* Required:
+  * [ESX Legacy V1.6+]( https://github.com/esx-framework/esx-legacy/tree/1.6.0 )
+* Optional:
+  * NONE
 
-esx_joblisting - virtual Job Center!
+# Download & Installation:
+1) Import `esx_joblisting.sql` in your database
+2) Place `esx_joblisting` in your ESX Directory
+3) Add `start esx_joblisting` to your server.cfg
+4) Edit the `config.lua` to your liking
 
-Copyright (C) 2015-2023 Jérémie N'gadi, ESX-Framework
-
-This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
-
-This program Is distributed In the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty Of MERCHANTABILITY Or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License For more details.
-
-You should have received a copy Of the GNU General Public License along with this program. If Not, see http://www.gnu.org/licenses/.
+# Credits/Original Code:
+* [ESX-Framework]( https://github.com/esx-framework )
+  * [esx_joblisting]( https://github.com/esx-framework/esx-legacy/tree/main/%5Besx_addons%5D/esx_joblisting )
+* The ideal was from esx_JobWhitelisting which is no longer being supported.

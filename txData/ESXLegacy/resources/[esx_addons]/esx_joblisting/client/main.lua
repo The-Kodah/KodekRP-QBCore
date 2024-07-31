@@ -1,81 +1,147 @@
-local menuIsShowed, TextUIdrawing = false, false
+local CurrentActionData = {}
+local HasAlreadyEnteredMarker, IsInMainMenu = false, false
+local LastZone, CurrentAction, CurrentActionMsg
 
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(xPlayer)
+	ESX.PlayerData = xPlayer
+end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+	ESX.PlayerData.job = job
+end)
+
+-- Show Job Menu
 function ShowJobListingMenu()
-  menuIsShowed = true
-  ESX.TriggerServerCallback('esx_joblisting:getJobsList', function(jobs)
-    local elements = {{unselectable = "true", title = TranslateCap('job_center'), icon = "fas fa-briefcase"}}
+	IsInMainMenu = true
+	ESX.TriggerServerCallback('esx_joblisting:getJobsList', function(jobs)
+		local elements = {}
 
-    for i = 1, #(jobs) do
-      elements[#elements + 1] = {title = jobs[i].label, name = jobs[i].name}
-    end
+		for i=1, #jobs, 1 do
+			table.insert(elements, {
+				label = jobs[i].label,
+				job = jobs[i].job
+			})
+		end
 
-    ESX.OpenContext("right", elements, function(menu, SelectJob)
-      TriggerServerEvent('esx_joblisting:setJob', SelectJob.name)
-      ESX.CloseContext()
-      ESX.ShowNotification(TranslateCap('new_job', SelectJob.title), "success")
-      menuIsShowed = false
-      TextUIdrawing = false
-    end, function()
-      menuIsShowed = false
-      TextUIdrawing = false
-    end)
-  end)
+		ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'joblisting', {
+			title = _U('job_center'),
+			align = GetConvar('esx_MenuAlign', 'top-left'),
+			elements = elements
+		}, function(data, menu)
+			TriggerServerEvent('esx_joblisting:setJob', data.current.job)
+			ESX.ShowNotification(_U('new_job'))
+			IsInMainMenu = false
+			menu.close()
+		end, function(data, menu)
+			IsInMainMenu = false
+			menu.close()
+			CurrentAction = 'job_menu'
+			CurrentActionData = {}
+		end)
+	end)
 end
 
--- Activate menu when player is inside marker, and draw markers
+-- Entered Marker
+AddEventHandler('esx_joblisting:hasEnteredMarker', function(zone)
+	if zone == 'JobLocs' then
+		CurrentAction = 'job_menu'
+		CurrentActionMsg = _U('job_menu')
+		CurrentActionData = {}
+	end
+end)
+
+-- Exited Marker
+AddEventHandler('esx_joblisting:hasExitedMarker', function(zone)
+	if not IsInMainMenu or IsInMainMenu then
+		ESX.UI.Menu.CloseAll()
+	end
+
+	CurrentAction = nil
+end)
+
+-- Resource Stop
+AddEventHandler('onResourceStop', function(resource)
+	if resource == GetCurrentResourceName() then
+		if IsInMainMenu then
+			ESX.UI.Menu.CloseAll()
+		end
+	end
+end)
+
+-- Enter / Exit marker events & Draw Markers
 CreateThread(function()
-  while true do
-    local Sleep = 1500
+	while true do
+		Wait(0)
+		local playerCoords = GetEntityCoords(PlayerPedId())
+		local isInMarker, letSleep, currentZone = false, true, nil
 
-    local coords = GetEntityCoords(ESX.PlayerData.ped)
-    local isInMarker = false
+		for k,v in ipairs(Config.Locs) do
+			local distance = #(playerCoords - v)
 
-    for i = 1, #Config.Zones, 1 do
-      local distance = #(coords - Config.Zones[i])
+			if distance < Config.DrawDistance then
+				letSleep = false
 
-      if distance < Config.DrawDistance then
-        Sleep = 0
-        DrawMarker(Config.MarkerType, Config.Zones[i], 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.ZoneSize.x, Config.ZoneSize.y, Config.ZoneSize.z,
-          Config.MarkerColor.r, Config.MarkerColor.g, Config.MarkerColor.b, 100, false, true, 2, false, false, false, false)
-      end
+				if Config.Marker.Type ~= -1 then
+					DrawMarker(Config.Marker.Type, v, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, 100, false, true, 2, false, nil, nil, false)
+				end
 
-      if distance < (Config.ZoneSize.x / 2) then
-        isInMarker = true
-        if not TextUIdrawing then
-          ESX.TextUI(TranslateCap("access_job_center"))
-          TextUIdrawing = true
-        end
-        if IsControlJustReleased(0, 38) and not menuIsShowed then
-          ShowJobListingMenu()
-          ESX.HideUI()
-        end
-      end
-    end
+				if distance < Config.Marker.x then
+					isInMarker, currentZone = true, 'JobLocs'
+				end
+			end
+		end
 
-    if not isInMarker and TextUIdrawing then
-      ESX.HideUI()
-      TextUIdrawing = false
-    end
+		if (isInMarker and not HasAlreadyEnteredMarker) or (isInMarker and LastZone ~= currentZone) then
+			HasAlreadyEnteredMarker, LastZone = true, currentZone
+			LastZone = currentZone
+			TriggerEvent('esx_joblisting:hasEnteredMarker', currentZone)
+		end
 
-    Wait(Sleep)
-  end
+		if not isInMarker and HasAlreadyEnteredMarker then
+			HasAlreadyEnteredMarker = false
+			TriggerEvent('esx_joblisting:hasExitedMarker', LastZone)
+		end
+
+		if letSleep then
+			Wait(500)
+		end
+	end
 end)
 
 -- Create blips
-if Config.Blip.Enabled then
-  CreateThread(function()
-    for i = 1, #Config.Zones, 1 do
-      local blip = AddBlipForCoord(Config.Zones[i])
+CreateThread(function()
+	for k,v in ipairs(Config.Locs) do
+		local blip = AddBlipForCoord(v)
+		SetBlipSprite(blip, 407)
+		SetBlipDisplay(blip, 4)
+		SetBlipScale(blip, 1.2)
+		SetBlipColour(blip, 27)
+		SetBlipAsShortRange(blip, true)
+		BeginTextCommandSetBlipName('STRING')
+		AddTextComponentSubstringPlayerName(_U('job_center'))
+		EndTextCommandSetBlipName(blip)
+	end
+end)
 
-      SetBlipSprite(blip, Config.Blip.Sprite)
-      SetBlipDisplay(blip, Config.Blip.Display)
-      SetBlipScale(blip, Config.Blip.Scale)
-      SetBlipColour(blip, Config.Blip.Colour)
-      SetBlipAsShortRange(blip, Config.Blip.ShortRange)
+-- Menu Controls
+CreateThread(function()
+	while true do
+		Wait(0)
 
-      BeginTextCommandSetBlipName("STRING")
-      AddTextComponentSubstringPlayerName(TranslateCap('blip_text'))
-      EndTextCommandSetBlipName(blip)
-    end
-  end)
-end
+		if CurrentAction then
+			ESX.ShowHelpNotification(CurrentActionMsg)
+
+			if IsControlJustReleased(0, 38) then
+				if CurrentAction == 'job_menu' then
+					ShowJobListingMenu()
+				end
+
+				CurrentAction = nil
+			end
+		else
+			Wait(500)
+		end
+	end
+end)

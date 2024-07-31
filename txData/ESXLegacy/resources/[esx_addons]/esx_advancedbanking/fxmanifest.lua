@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'Velociti Entertainment aka Human Tree92'
 
-description 'ESX Job Listing'
+description 'ESX Advanced Banking'
 
 version '1.6+'
 
@@ -23,6 +23,22 @@ server_scripts {
 client_scripts {
 	'client/main.lua'
 }
+
+ui_page 'html/UI.html'
+
+files {
+	-- Advanced
+	--'html/UI.html',
+	--'html/style.css',
+	--'html/media/font/*.otf',
+	--'html/media/img/*.png',
+	-- Basic
+	--'html/UI.html',
+	--'html/style.css',
+	--'html/img/BG_White.png',
+}
+
+export 'openUI'
 
 dependencies {
 	'es_extended'

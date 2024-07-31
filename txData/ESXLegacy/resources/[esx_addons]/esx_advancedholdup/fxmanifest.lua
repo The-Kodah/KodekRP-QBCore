@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'Velociti Entertainment aka Human Tree92'
 
-description 'ESX Job Listing'
+description 'ESX Advanced Holdup'
 
 version '1.6+'
 
@@ -16,7 +16,6 @@ shared_scripts {
 }
 
 server_scripts {
-	'@oxmysql/lib/MySQL.lua',
 	'server/main.lua'
 }
 

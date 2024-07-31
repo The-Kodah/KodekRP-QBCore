@@ -1,6 +1,5 @@
 Locales['en'] = {
-  ['new_job'] = 'New Job: ~b~%s~s~ !',
-  ['access_job_center'] = 'Press ~b~[E]~s~ To Open Job Selector.',
-  ['job_center'] = 'Select A Job.',
-  ["blip_text"] = "Job Centre"
+	['job_menu'] = 'Press ~INPUT_CONTEXT~ to Access ~b~Job Center~s~.',
+	['job_center'] = 'Job Center',
+	['new_job'] = 'You have a NEW Job!',
 }
