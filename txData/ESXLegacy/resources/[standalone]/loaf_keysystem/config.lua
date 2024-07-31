@@ -1,7 +1,7 @@
 Config = {
     Debug = false,
     Framework = "esx", -- esx or qb
-    Align = "top-center", -- menu alignment (esx)
+    Align = "top-middle", -- menu alignment (esx)
     Command = "keys", -- false to disable
     Keybind = "PAGEUP", -- false to disable, requires command
     UseRPName = true, -- use the in-game name instead of fivem name + id?
