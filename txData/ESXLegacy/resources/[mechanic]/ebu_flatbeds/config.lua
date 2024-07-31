@@ -46,12 +46,12 @@ Config.DisableInVehControl          = false         --Disable key controls for i
 Config.ShowMarkers = true           -- Display markers at interaction points
 Config.ShowHelp = true              -- Display help prompts
 
-Config.MarkerDistance   = 5.0       -- Distance from point to see marker
+Config.MarkerDistance   = 10.0       -- Distance from point to see marker
 Config.WaitTimer = 3000             -- Update rate to check for nearby trailer seconds * 1000 (Default 3000)
 
 Config.MessageDistance = 2.0        -- Distance from point to display message (Default 2.0)
 Config.Marker = {
-    type = 1,                      -- marker shape: https://docs.fivem.net/docs/game-references/markers/ (Default 27)
+    type = 27,                      -- marker shape: https://docs.fivem.net/docs/game-references/markers/ (Default 27)
 
     Size = 1.0,                     -- marker size (Default 2.0)
 
@@ -61,10 +61,10 @@ Config.Marker = {
         blue = 200,
         alpha = 150
     },
-    heightOffset = 0.0,             -- Height from ground for marker. Marker at ground Z (Default 0.0)
+    heightOffset = 0.2,             -- Height from ground for marker. Marker at ground Z (Default 0.0)
     Bob = false,                    -- Marker bobbing up and down (Default false)
     faceCamera = false,             -- Marker always faces camera (Default false)
-    rotate = false                  -- Marker rotates (Default false)
+    rotate = true                  -- Marker rotates (Default false)
 }
 
 Config.Controlmessages = {
