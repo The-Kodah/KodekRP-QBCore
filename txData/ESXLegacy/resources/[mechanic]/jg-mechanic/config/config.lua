@@ -141,6 +141,36 @@ Config.MechanicLocations = {
     },
   },
 
+  beekers = {
+    type = "self-service",
+    logo = "beekers.png", -- logos go in /logos
+    locations = {
+      {
+        coords = vector3(110.3076, 6627.06, 31.77368),
+        size = 6.0,
+        showBlip = true,
+      }
+    },
+    blip = {
+      id = 446,
+      color = 47,
+      scale = 0.6
+    },
+    mods = {
+      repair           = { enabled = true, price = 500, percentVehVal = 0.5 },
+      performance      = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      cosmetics        = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      stance           = { enabled = false, price = 500, percentVehVal = 0.01 },
+      respray          = { enabled = false, price = 500, percentVehVal = 0.01 },
+      wheels           = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      neonLights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      headlights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      tyreSmoke        = { enabled = false, price = 500, percentVehVal = 0.01 },
+      bulletproofTyres = { enabled = false, price = 500, percentVehVal = 0.01 },
+      extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
+    },
+  },
+
   bennys = {
     type = "owned",
     job = "mechanic",
