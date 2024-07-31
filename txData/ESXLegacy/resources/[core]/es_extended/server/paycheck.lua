@@ -11,7 +11,7 @@ function StartPayCheck()
                     if job == "unemployed" then -- unemployed
                         xPlayer.addAccountMoney("bank", salary, "Welfare Check")
                         -- Replaced with ox_lib notification
-                        exports['ox_lib']:notify({
+                        TriggerClientEvent("ox_lib:notify", player, {
                             title = TranslateCap("bank"),
                             description = TranslateCap("received_help", salary),
                             icon = "CHAR_BANK_MAZE",
@@ -40,7 +40,7 @@ function StartPayCheck()
                                         end
 
                                         -- Replaced with ox_lib notification
-                                        exports['ox_lib']:notify({
+                                        TriggerClientEvent("ox_lib:notify", player, {
                                             title = TranslateCap("bank"),
                                             description = TranslateCap("received_salary", salary),
                                             icon = "CHAR_BANK_MAZE",
@@ -48,7 +48,7 @@ function StartPayCheck()
                                         })
                                     else
                                         -- Replaced with ox_lib notification
-                                        exports['ox_lib']:notify({
+                                        TriggerClientEvent("ox_lib:notify", player, {
                                             title = TranslateCap("bank"),
                                             description = TranslateCap("company_nomoney"),
                                             icon = "CHAR_BANK_MAZE",
@@ -66,7 +66,7 @@ function StartPayCheck()
                                     })
                                 end
                                 -- Replaced with ox_lib notification
-                                exports['ox_lib']:notify({
+                                TriggerClientEvent("ox_lib:notify", player, {
                                     title = TranslateCap("bank"),
                                     description = TranslateCap("received_salary", salary),
                                     icon = "CHAR_BANK_MAZE",
@@ -84,7 +84,7 @@ function StartPayCheck()
                             })
                         end
                         -- Replaced with ox_lib notification
-                        exports['ox_lib']:notify({
+                        TriggerClientEvent("ox_lib:notify", player, {
                             title = TranslateCap("bank"),
                             description = TranslateCap("received_salary", salary),
                             icon = "CHAR_BANK_MAZE",

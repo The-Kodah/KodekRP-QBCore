@@ -134,7 +134,7 @@ Config.MechanicLocations = {
     },
     mods = {
       repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
-      performance      = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      performance      = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
       cosmetics        = { enabled = true, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
       stance           = { enabled = true, price = 500, percentVehVal = 0.01 },
       respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
