@@ -17,12 +17,6 @@ Citizen.CreateThread(function()
         local ped = GetPlayerPed(-1)
         local veh = GetVehiclePedIsIn(ped, false)
 
-        if not notify then
-            if IsPedInAnyVehicle(ped, true) then
-                ShowNotification("Hold ~b~F ~w~when exiting to leave engine running.")
-                notify = false
-            end
-        end
         if RestrictEmer then
             if GetVehicleClass(veh) == 18 then
                 if IsPedInAnyVehicle(ped, false) and IsControlPressed(2, 75) and not IsEntityDead(ped) then
