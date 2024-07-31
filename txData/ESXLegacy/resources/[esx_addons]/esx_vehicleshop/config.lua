@@ -20,7 +20,7 @@ Config.Blip = {
 	show = true,
 	Sprite = 326,
 	Display = 4,
-	Scale = 0.8
+	Scale = 0.6
 }
 
 Config.Zones = {

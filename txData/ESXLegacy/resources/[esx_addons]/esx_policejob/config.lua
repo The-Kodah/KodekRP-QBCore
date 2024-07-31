@@ -8,16 +8,16 @@ Config.MarkerColor                = {r = 50, g = 50, b = 204}
 Config.EnablePlayerManagement     = true -- Enable if you want society managing.
 Config.EnableArmoryManagement     = false
 Config.EnableESXIdentity          = true -- Enable if you're using esx_identity.
-Config.EnableESXOptionalneeds     = false -- Enable if you're using esx_optionalneeds
-Config.EnableLicenses             = false -- Enable if you're using esx_license.
+Config.EnableESXOptionalneeds     = true -- Enable if you're using esx_optionalneeds
+Config.EnableLicenses             = true -- Enable if you're using esx_license.
 
-Config.EnableHandcuffTimer        = true -- Enable handcuff timer? will unrestrain player after the time ends.
+Config.EnableHandcuffTimer        = false -- Enable handcuff timer? will unrestrain player after the time ends.
 Config.HandcuffTimer              = 10 * 60000 -- 10 minutes.
 
-Config.EnableJobBlip              = false -- Enable blips for cops on duty, requires esx_society.
-Config.EnableCustomPeds           = false -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
+Config.EnableJobBlip              = true -- Enable blips for cops on duty, requires esx_society.
+Config.EnableCustomPeds           = true -- Enable custom peds in cloak room? See Config.CustomPeds below to customize peds.
 
-Config.EnableESXService           = false -- Enable esx service?
+Config.EnableESXService           = true -- Enable esx service?
 Config.MaxInService               = -1 -- How many people can be in service at once? Set as -1 to have no limit
 
 Config.EnableFinePresets          = false -- Set to false to use a custom input fields for fines
@@ -34,7 +34,7 @@ Config.PoliceStations = {
 			Coords  = vector3(425.1, -979.5, 30.7),
 			Sprite  = 60,
 			Display = 4,
-			Scale   = 1.2,
+			Scale   = 0.6,
 			Colour  = 29
 		},
 

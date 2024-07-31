@@ -2,7 +2,7 @@ Config                            = {}
 
 Config.DrawDistance               = 20.0 -- How close do you need to be in order for the markers to be drawn (in GTA units).
 Config.Debug                      = ESX.GetConfig().EnableDebug
-Config.Marker                     = {type = 1, x = 1.5, y = 1.5, z = 0.5, r = 102, g = 0, b = 102, a = 100, rotate = false}
+Config.Marker                     = {type = 1, x = 1.5, y = 1.5, z = 0.5, r = 102, g = 0, b = 102, a = 100, rotate = true}
 
 Config.ReviveReward               = 700  -- Revive reward, set to 0 if you don't want it enabled
 Config.SaveDeathStatus              = true -- Save Death Status?
@@ -13,7 +13,7 @@ Config.Locale = GetConvar('esx:locale', 'en')
 Config.DistressBlip = {
 	Sprite = 310,
 	Color = 48,
-	Scale = 2.0
+	Scale = 0.6
 }
 
 Config.zoom = {
@@ -59,7 +59,7 @@ Config.Hospitals = {
 		Blip = {
 			coords = vector3(307.7, -1433.4, 28.9),
 			sprite = 61,
-			scale  = 1.2,
+			scale  = 0.6,
 			color  = 2
 		},
 
