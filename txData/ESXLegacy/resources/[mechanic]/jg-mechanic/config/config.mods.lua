@@ -26,7 +26,6 @@ Config.Mods.Performance = {
 	{ modType = 12, name = "Brakes" },
 	{ modType = 13, name = "Transmission" },
 	{ modType = 15, name = "Suspension" },
-	{ modType = 16, name = "Armour" },
   { modType = 18, name = "Turbocharging", toggle = true } 
 }
 
