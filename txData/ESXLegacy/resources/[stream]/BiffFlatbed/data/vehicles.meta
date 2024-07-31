@@ -6,7 +6,7 @@
 	<Item>
       <modelName>biftowmfd2</modelName>
       <txdName>biftowmfd2</txdName>
-      <handlingId>TOWTRUCK</handlingId>
+      <handlingId>MFDFLATBED</handlingId>
       <gameName>biftowmfd2</gameName>
       <vehicleMakeName />
       <expressionDictName>null</expressionDictName>
@@ -15,7 +15,7 @@
       <animConvRoofName>null</animConvRoofName>
       <animConvRoofWindowsAffected />
       <ptfxAssetName>null</ptfxAssetName>
-      <audioNameHash>TOWTRUCK</audioNameHash>
+      <audioNameHash>CHERNOBOG</audioNameHash>
       <layout>LAYOUT_TRUCK_BIFF</layout>
       <coverBoundOffsets>BIFF_COVER_OFFSET_INFO</coverBoundOffsets>
       <explosionInfo>EXPLOSION_INFO_TRUCK</explosionInfo>
