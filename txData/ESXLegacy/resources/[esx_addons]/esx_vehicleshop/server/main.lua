@@ -149,27 +149,51 @@ AddEventHandler('esx_vehicleshop:putStockItems', function(itemName, count)
 	end)
 end)
 
+--ESX.RegisterServerCallback('esx_vehicleshop:buyVehicle', function(source, cb, model, plate)
+--	local xPlayer = ESX.GetPlayerFromId(source)
+--	local modelPrice = getVehicleFromModel(model).price
+
+--	if modelPrice and xPlayer.getMoney() >= modelPrice then
+--		xPlayer.removeMoney(modelPrice, "Vehicle Purchase")
+
+--		MySQL.insert('INSERT INTO owned_vehicles (owner, plate, vehicle) VALUES (?, ?, ?)', {xPlayer.identifier, plate, json.encode({model = joaat(model), plate = plate})
+--		}, function(rowsChanged)
+--			xPlayer.showNotification(TranslateCap('vehicle_belongs', plate))
+--			ESX.OneSync.SpawnVehicle(joaat(model), Config.Zones.ShopOutside.Pos, Config.Zones.ShopOutside.Heading,{plate = plate}, function(vehicle)
+--				Wait(100)
+--				local vehicle = NetworkGetEntityFromNetworkId(vehicle)
+--				Wait(300)
+--				TaskWarpPedIntoVehicle(GetPlayerPed(source), vehicle, -1)
+--			end)
+--			cb(true)
+--		end)
+--	else
+--		cb(false)
+--	end
+--end)
+
 ESX.RegisterServerCallback('esx_vehicleshop:buyVehicle', function(source, cb, model, plate)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	local modelPrice = getVehicleFromModel(model).price
+    local xPlayer = ESX.GetPlayerFromId(source)
+    local modelPrice = getVehicleFromModel(model).price
 
-	if modelPrice and xPlayer.getMoney() >= modelPrice then
-		xPlayer.removeMoney(modelPrice, "Vehicle Purchase")
+    if modelPrice and xPlayer.getMoney() >= modelPrice then
+        xPlayer.removeMoney(modelPrice, "Vehicle Purchase")
 
-		MySQL.insert('INSERT INTO owned_vehicles (owner, plate, vehicle) VALUES (?, ?, ?)', {xPlayer.identifier, plate, json.encode({model = joaat(model), plate = plate})
-		}, function(rowsChanged)
-			xPlayer.showNotification(TranslateCap('vehicle_belongs', plate))
-			ESX.OneSync.SpawnVehicle(joaat(model), Config.Zones.ShopOutside.Pos, Config.Zones.ShopOutside.Heading,{plate = plate}, function(vehicle)
-				Wait(100)
-				local vehicle = NetworkGetEntityFromNetworkId(vehicle)
-				Wait(300)
-				TaskWarpPedIntoVehicle(GetPlayerPed(source), vehicle, -1)
-			end)
-			cb(true)
-		end)
-	else
-		cb(false)
-	end
+        MySQL.insert('INSERT INTO owned_vehicles (owner, plate, vehicle) VALUES (?, ?, ?)', {xPlayer.identifier, plate, json.encode({model = joaat(model), plate = plate})
+        }, function(rowsChanged)
+            xPlayer.showNotification(TranslateCap('vehicle_belongs', plate))
+            ESX.OneSync.SpawnVehicle(joaat(model), Config.Zones.ShopOutside.Pos, Config.Zones.ShopOutside.Heading,{plate = plate}, function(vehicle)
+                Wait(100)
+                local vehicle = NetworkGetEntityFromNetworkId(vehicle)
+                Wait(300)
+                exports.wasabi_carlock:GiveKey(source, plate)
+                TaskWarpPedIntoVehicle(GetPlayerPed(source), vehicle, -1)
+            end)
+            cb(true)
+        end)
+    else
+        cb(false)
+    end
 end)
 
 ESX.RegisterServerCallback('esx_vehicleshop:getCommercialVehicles', function(source, cb)
