@@ -10,7 +10,13 @@ function StartPayCheck()
                 if salary > 0 then
                     if job == "unemployed" then -- unemployed
                         xPlayer.addAccountMoney("bank", salary, "Welfare Check")
-                        TriggerClientEvent("esx:showAdvancedNotification", player, TranslateCap("bank"), TranslateCap("received_paycheck"), TranslateCap("received_help", salary), "CHAR_BANK_MAZE", 9)
+                        -- Replaced with ox_lib notification
+                        exports['ox_lib']:notify({
+                            title = TranslateCap("bank"),
+                            description = TranslateCap("received_help", salary),
+                            icon = "CHAR_BANK_MAZE",
+                            type = "success"
+                        })
                         if Config.LogPaycheck then
                             ESX.DiscordLogFields("Paycheck", "Paycheck - Unemployment Benefits", "green", {
                                 { name = "Player", value = xPlayer.name, inline = true },
@@ -33,9 +39,21 @@ function StartPayCheck()
                                             })
                                         end
 
-                                        TriggerClientEvent("esx:showAdvancedNotification", player, TranslateCap("bank"), TranslateCap("received_paycheck"), TranslateCap("received_salary", salary), "CHAR_BANK_MAZE", 9)
+                                        -- Replaced with ox_lib notification
+                                        exports['ox_lib']:notify({
+                                            title = TranslateCap("bank"),
+                                            description = TranslateCap("received_salary", salary),
+                                            icon = "CHAR_BANK_MAZE",
+                                            type = "success"
+                                        })
                                     else
-                                        TriggerClientEvent("esx:showAdvancedNotification", player, TranslateCap("bank"), "", TranslateCap("company_nomoney"), "CHAR_BANK_MAZE", 1)
+                                        -- Replaced with ox_lib notification
+                                        exports['ox_lib']:notify({
+                                            title = TranslateCap("bank"),
+                                            description = TranslateCap("company_nomoney"),
+                                            icon = "CHAR_BANK_MAZE",
+                                            type = "error"
+                                        })
                                     end
                                 end)
                             else -- not a society
@@ -47,7 +65,13 @@ function StartPayCheck()
                                         { name = "Amount", value = salary, inline = true },
                                     })
                                 end
-                                TriggerClientEvent("esx:showAdvancedNotification", player, TranslateCap("bank"), TranslateCap("received_paycheck"), TranslateCap("received_salary", salary), "CHAR_BANK_MAZE", 9)
+                                -- Replaced with ox_lib notification
+                                exports['ox_lib']:notify({
+                                    title = TranslateCap("bank"),
+                                    description = TranslateCap("received_salary", salary),
+                                    icon = "CHAR_BANK_MAZE",
+                                    type = "success"
+                                })
                             end
                         end)
                     else -- generic job
@@ -59,7 +83,13 @@ function StartPayCheck()
                                 { name = "Amount", value = salary, inline = true },
                             })
                         end
-                        TriggerClientEvent("esx:showAdvancedNotification", player, TranslateCap("bank"), TranslateCap("received_paycheck"), TranslateCap("received_salary", salary), "CHAR_BANK_MAZE", 9)
+                        -- Replaced with ox_lib notification
+                        exports['ox_lib']:notify({
+                            title = TranslateCap("bank"),
+                            description = TranslateCap("received_salary", salary),
+                            icon = "CHAR_BANK_MAZE",
+                            type = "success"
+                        })
                     end
                 end
             end
