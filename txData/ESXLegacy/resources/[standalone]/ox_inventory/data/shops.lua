@@ -61,7 +61,7 @@ return {
 	YouTool = {
 		name = 'YouTool',
 		blip = {
-			id = 402, colour = 69, scale = 0.8
+			id = 566, colour = 69, scale = 0.8
 		}, inventory = {
 			{ name = 'duct_tape', price = 10 },
 			{ name = 'repair_kit', price = 10 },
