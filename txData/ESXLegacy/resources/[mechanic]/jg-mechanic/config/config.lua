@@ -97,11 +97,11 @@ Config.MechanicLocations = {
       scale = 0.6
     },
     mods = {
-      repair           = { enabled = true, price = 500, percentVehVal = 0.01 },
+      repair           = { enabled = true, price = 500, percentVehVal = 0.5 },
       performance      = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
       cosmetics        = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
       stance           = { enabled = false, price = 500, percentVehVal = 0.01 },
-      respray          = { enabled = true, price = 500, percentVehVal = 0.01 },
+      respray          = { enabled = false, price = 500, percentVehVal = 0.01 },
       wheels           = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
       neonLights       = { enabled = false, price = 500, percentVehVal = 0.01 },
       headlights       = { enabled = false, price = 500, percentVehVal = 0.01 },
@@ -110,6 +110,37 @@ Config.MechanicLocations = {
       extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
     },
   },
+
+  lscustomsharmony = {
+    type = "self-service",
+    logo = "lscustoms.png", -- logos go in /logos
+    locations = {
+      {
+        coords = vector3(1174.932, 2639.934, 37.7384),
+        size = 5.0,
+        showBlip = true,
+      }
+    },
+    blip = {
+      id = 446,
+      color = 47,
+      scale = 0.6
+    },
+    mods = {
+      repair           = { enabled = true, price = 500, percentVehVal = 0.5 },
+      performance      = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      cosmetics        = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      stance           = { enabled = false, price = 500, percentVehVal = 0.01 },
+      respray          = { enabled = false, price = 500, percentVehVal = 0.01 },
+      wheels           = { enabled = false, price = 500, percentVehVal = 0.01, priceMult = 0.1 },
+      neonLights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      headlights       = { enabled = false, price = 500, percentVehVal = 0.01 },
+      tyreSmoke        = { enabled = false, price = 500, percentVehVal = 0.01 },
+      bulletproofTyres = { enabled = false, price = 500, percentVehVal = 0.01 },
+      extras           = { enabled = true, price = 500, percentVehVal = 0.01 }
+    },
+  },
+
   bennys = {
     type = "owned",
     job = "mechanic",
