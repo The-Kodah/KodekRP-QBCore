@@ -21,19 +21,17 @@ Config.robPedKeys       = {     -- Ability to rob peds at gun point for their ke
 }
 
 Config.givingKeys       = {       -- Giving keys options
-    enabled = true,                -- Enable giving keys feature?
+    enabled = true,               -- Enable giving keys feature?
     command = 'givekey',          -- Desired command to give key
     removeKey = true,             -- Remove the key to vehicle from person giving key
-    menuPosition =
-    'top-middle'                -- Choose where player selection menu is positioned. Options : 'top-left' or 'top-right' or 'bottom-left' or 'bottom-right'
+    menuPosition = 'top-left'     -- Choose where player selection menu is positioned. Options : 'top-left' or 'top-right' or 'bottom-left' or 'bottom-right'
 }
 
 Config.manageKeys            = {  -- Manage keys in hand via menu
     enabled = true,               -- Enable this feature
     command = 'managekeys',       -- Command to open menu for opening key management menu (Set to false if not desired)
     allowRemove = true,           -- Allow removal of keys that were given
-    menuPosition =
-    'top-middle'                -- Choose where key selection menu is positioned. Options : 'top-left' or 'top-right' or 'bottom-left' or 'bottom-right'
+    menuPosition = 'top-left'     -- Choose where key selection menu is positioned. Options : 'top-left' or 'top-right' or 'bottom-left' or 'bottom-right'
 }
 
 Config.noKeysNeeded          = { -- Vehcile models that don't require keys
