@@ -11,6 +11,6 @@ MercenariesFixes = {
     end,
 
     LoadDefault = function()
-        MercenariesFixes.Enable(true)
+        MercenariesFixes.Enable(false)
     end
 }
