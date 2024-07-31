@@ -113,11 +113,11 @@ Config.MechanicLocations = {
 
   lscustomsharmony = {
     type = "self-service",
-    logo = "lscustoms.png", -- logos go in /logos
+    logo = "ls_customs.png", -- logos go in /logos
     locations = {
       {
         coords = vector3(1174.932, 2639.934, 37.7384),
-        size = 5.0,
+        size = 6.0,
         showBlip = true,
       }
     },
