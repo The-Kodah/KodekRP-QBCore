@@ -63,7 +63,22 @@ return {
 		blip = {
 			id = 402, colour = 69, scale = 0.8
 		}, inventory = {
-			{ name = 'lockpick', price = 10 }
+			{ name = 'duct_tape', price = 10 },
+			{ name = 'repair_kit', price = 10 },
+			{ name = 'cleaning_kit', price = 10 },
+			{ name = 'wool', price = 10 },
+			{ name = 'wood', price = 10 },
+			{ name = 'carokit', price = 10 },
+			{ name = 'carotool', price = 10 },
+			{ name = 'fixkit', price = 10 },
+			{ name = 'fixtool', price = 10 },
+			{ name = 'blowpipe', price = 10 },
+			{ name = 'weapon_hammer', price = 10 },
+			{ name = 'weapon_flashlight', price = 10 },
+			{ name = 'weapon_crowbar', price = 10 },
+			{ name = 'weapon_hatchet', price = 10 },
+			{ name = 'weapon_wrench', price = 10 }
+
 		}, locations = {
 			vec3(2748.0, 3473.0, 55.67),
 			vec3(342.99, -1298.26, 32.51)
