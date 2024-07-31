@@ -1,5 +1,10 @@
--------------------------------------------
---- Leave Engine Running, Made by FAXES ---
--------------------------------------------
+fx_version 'cerulean'
+game 'gta5'
 
-client_script "client.lua"
+author 'Kodah'
+description 'Utility'
+version '1.0.0'
+
+client_scripts {
+    'client.lua'
+}

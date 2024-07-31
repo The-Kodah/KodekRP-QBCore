@@ -1,7 +1,3 @@
--------------------------------------------
---- Leave Engine Running, Made by FAXES ---
--------------------------------------------
-
 --- Config ---
 RestrictEmer = false -- Only allow this feature for emergency vehicles.
 keepDoorOpen = true -- Keep the door open when getting out.
@@ -24,7 +20,7 @@ Citizen.CreateThread(function()
         if not notify then
             if IsPedInAnyVehicle(ped, true) then
                 ShowNotification("Hold ~b~F ~w~when exiting to leave engine running.")
-                notify = true
+                notify = false
             end
         end
         if RestrictEmer then
