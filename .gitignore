@@ -1,0 +1,26 @@
+# Ignore the FiveM server binary and runtime files
+run/
+cache/
+logs/
+crashes/
+*.pid
+*.log
+
+# Ignore sensitive configuration files
+.env
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+
+# Ignore backup files created by editors
+*~
+*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency folders
+node_modules/
