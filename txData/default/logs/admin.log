@@ -1,0 +1,10 @@
+
+================================================================
+======== txAdmin v7.2.2 atop fxserver 9206 Starting - 8/6/2024, 10:28:20 PM
+================================================================
+[22:29:19][TheKodah] created admins file
+[22:30:05][TheKodah] Changing global settings via setup stepper and started Deployer.
+[22:30:10][TheKodah] Setting recipe.
+[22:31:21][TheKodah] Running recipe.
+[22:35:26][TheKodah] Completed and committed server deploy.
+[22:42:22][TheKodah] Adding admin 'boosted'.

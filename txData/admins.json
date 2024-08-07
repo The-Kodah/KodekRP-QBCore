@@ -1,1 +1,49 @@
-[{"name":"TheKodah","master":true,"password_hash":"$2a$11$ncHeSE2l8JtwwPdSBUEaUuCjrjytdHTdpXztAB46LsIyXYuu4y.si","providers":{"citizenfx":{"id":"TheKodah","identifier":"fivem:14747","data":{"name":"TheKodah","profile":"https://forum.cfx.re/u/TheKodah","nameid":"https://forum.cfx.re/internal/user/14747","picture":"https://forum.cfx.re/user_avatar/forum.cfx.re/thekodah/256/73709_2.png"}},"discord":{"id":"96078945820119040","identifier":"discord:96078945820119040","data":{}}},"permissions":[]}]
+[
+  {
+    "name": "TheKodah",
+    "master": true,
+    "password_hash": "$2a$11$PfOq1HfqAvPlFI21rDK4CuslRR8G.BEwB2xU3WsBpotW8e361Q7nO",
+    "providers": {
+      "citizenfx": {
+        "id": "TheKodah",
+        "identifier": "fivem:14747",
+        "data": {
+          "name": "TheKodah",
+          "profile": "https://forum.cfx.re/u/TheKodah",
+          "nameid": "https://forum.cfx.re/internal/user/14747",
+          "picture": "https://forum.cfx.re/user_avatar/forum.cfx.re/thekodah/256/73709_2.png"
+        }
+      },
+      "discord": {
+        "id": "96078945820119040",
+        "identifier": "discord:96078945820119040",
+        "data": {}
+      }
+    },
+    "permissions": []
+  },
+  {
+    "name": "boosted",
+    "master": false,
+    "password_hash": "$2a$11$NaEexZlZxYywp91dhEs.dOcZ.3zSubVVpT/2Xr4oQ4pFXoZ3BIosm",
+    "password_temporary": true,
+    "providers": {
+      "citizenfx": {
+        "id": "vvBOOSTEDvv",
+        "identifier": "fivem:12277542",
+        "data": {}
+      },
+      "discord": {
+        "id": "696703617893400603",
+        "identifier": "discord:696703617893400603",
+        "data": {}
+      }
+    },
+    "permissions": [
+      "menu.vehicle",
+      "players.heal",
+      "players.playermode",
+      "players.teleport"
+    ]
+  }
+]

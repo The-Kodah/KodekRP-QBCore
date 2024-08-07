@@ -438,29 +438,29 @@ R:sh
 a:0:0:777
 Z:Q1pcfTfDNEbNKQc2s1tia7da05M8Q=
 
-C:Q1h9U+MbfcbBr712O9FQLPeDpohCU=
+C:Q1oJjDCSXCt8U86kRdhFOAOm5mcyE=
 P:c-ares
-V:1.32.2-r0
+V:1.32.3-r0
 A:x86_64
-S:75753
+S:75775
 I:172032
 T:Asynchronous DNS/names resolver library
 U:https://c-ares.org/
 L:MIT
 o:c-ares
 m:Carlo Landmeter <clandmeter@alpinelinux.org>
-t:1721096986
-c:26a69e185b66a99178f782350008de71f624f58b
+t:1721944267
+c:38689a4c42b919fcec79d1a50ccc506dd15ea113
 D:so:libc.musl-x86_64.so.1
-p:so:libcares.so.2=2.17.2
+p:so:libcares.so.2=2.17.3
 F:usr
 F:usr/lib
 R:libcares.so.2
 a:0:0:777
-Z:Q16jLlGVkX+1fpcdCbPeSWff+FGWc=
-R:libcares.so.2.17.2
+Z:Q1K3qClEHMzNpIqTJ/Qdol8fzOiwk=
+R:libcares.so.2.17.3
 a:0:0:755
-Z:Q198Nb1S0VYmVeJoE7xuxIjWyR9kQ=
+Z:Q12gAEyYANqN5ZSjtw+kuJhg+fiYs=
 
 C:Q1/SEmh/I5B+U5Q8Pqfmih/gXs2Mo=
 P:ca-certificates
@@ -983,19 +983,19 @@ R:libatomic.so.1.2.0
 a:0:0:755
 Z:Q1elhnrtOaIgqku8w80HuwcuCjxWQ=
 
-C:Q1cqxQeLzS9q6/BFv0MPe+pbCUofY=
+C:Q14owZGKA0FPCq+bAE4ggl+NnRQn4=
 P:libblkid
-V:2.40.1-r1
+V:2.40.2-r0
 A:x86_64
-S:94142
+S:94149
 I:204800
 T:Block device identification library from util-linux
 U:https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 L:LGPL-2.1-or-later
 o:util-linux
 m:Natanael Copa <ncopa@alpinelinux.org>
-t:1716231576
-c:0686fad49f44169c40961b3c8b64428ea87702a1
+t:1721843833
+c:c2ce73f7fbf87f87902a9a6389c00e91e249d59b
 D:so:libc.musl-x86_64.so.1 so:libeconf.so.0
 p:so:libblkid.so.1=1.1.0
 F:lib
@@ -1004,7 +1004,7 @@ a:0:0:777
 Z:Q11IIbgA8xDH8nd2EPuh0U9dWaYQA=
 R:libblkid.so.1.1.0
 a:0:0:755
-Z:Q17+IFUT+g2YcWOo56TmWE6vcxRzQ=
+Z:Q17wTWxaI4bEt25VQw7skKwP+pwuE=
 
 C:Q1sL2pyMpRdkVWe6Z/RL4ZruOA3kA=
 P:libcrypto1.1
@@ -1232,19 +1232,19 @@ R:libintl.so.8.4.0
 a:0:0:755
 Z:Q1ALfXTbOomv3fGyf3Ivr9o7GYol8=
 
-C:Q1dTt1K7A4DssLo02pRYWD9cdNdwA=
+C:Q1PqjZdYl3dOF8YGWsibScKikHHHM=
 P:libmount
-V:2.40.1-r1
+V:2.40.2-r0
 A:x86_64
-S:122990
+S:123115
 I:278528
 T:Block device identification library from util-linux
 U:https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 L:LGPL-2.1-or-later
 o:util-linux
 m:Natanael Copa <ncopa@alpinelinux.org>
-t:1716231576
-c:0686fad49f44169c40961b3c8b64428ea87702a1
+t:1721843833
+c:c2ce73f7fbf87f87902a9a6389c00e91e249d59b
 D:so:libblkid.so.1 so:libc.musl-x86_64.so.1
 p:so:libmount.so.1=1.1.0
 F:lib
@@ -1253,7 +1253,7 @@ a:0:0:777
 Z:Q1APpuRKQwasoQkeg5L8vkC9Sa+Vc=
 R:libmount.so.1.1.0
 a:0:0:755
-Z:Q1IPoLPJ/AdFY0xCOCKAWmHZYWDE8=
+Z:Q1gA3Llavc55lrwTYR1RSzjE3E4IY=
 
 C:Q1Ya6t0KHmjRhpV41+R77vfG+baXE=
 P:libncursesw
